@@ -7,14 +7,22 @@ import dao.userdao;
 import entity.user;
 
 public class userdaoimpl implements userdao {
-
+	List<user> list = new ArrayList<user>();
 	@Override
 	public void save(user user) {
 		// TODO Auto-generated method stub
-		List<user> list = new ArrayList<user>();
+
 		list.add(user);
 		for (user User  : list) {
 			System.out.println(User.getName()+","+User.getAge());
+		}
+	}
+
+	@Override
+	public void update(user user) {
+		// TODO Auto-generated method stub
+		for (user User  : list) {
+			System.out.println("执行修改信息的操作");
 		}
 	}
 
